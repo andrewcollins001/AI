@@ -1,0 +1,20 @@
+const router = require("express").Router();
+
+/*
+Real mobile money must be verified here
+MTN / Airtel APIs
+*/
+
+router.post("/verify", async (req, res) => {
+  const { phone, amount, reference } = req.body;
+
+  // You verify transaction via MTN API here
+  // frontend CANNOT do this
+
+  res.json({
+    success: true,
+    paid: true
+  });
+});
+
+module.exports = router;
